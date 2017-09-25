@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" version="0.0.0" id="cordova-plugin-activity">
+	<js-module src="activity.js" name="activity">
+		<clobbers target="activity" />
+	</js-module>
+	<platform name="android">
+		<config-file target="config.xml" parent="/*">
+			<feature name="Activity">
+				<param name="android-package" value="com.youbanban.cordova.plugin.ActivityPlugin"/>
+			</feature>
+		</config-file>
+		<config-file target="AndroidManifest.xml" parent="/manifest/application">
+			<activity android:name="com.youbanban.cordova.plugin.Activity"/>
+		</config-file>
+		<source-file src="src/android/ActivityPlugin.java" target-dir="src/com/youbanban/cordova/plugin" />
+		<source-file src="src/android/Activity.java" target-dir="src/com/youbanban/cordova/plugin" />
+	</platform>
+</plugin>
