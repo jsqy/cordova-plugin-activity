@@ -1,3 +1,3 @@
-exports.start = function () {
-	cordova.exec(undefined, undefined, "Activity", "start", []);
+exports.start = function (onsucceed, onerror) {
+	cordova.exec(onsucceed, onerror, "Activity", "start", []);
 };
